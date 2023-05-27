@@ -6,7 +6,7 @@ phases:
       java: corretto8
   build:
     commands:
-      - mvn clean install shade:shade
+      - mvn clean install
   post_build:
     commands:
       - echo "Updating lambda Function..."
