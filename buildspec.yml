@@ -6,9 +6,9 @@ phases:
       java: corretto8
   build:
     commands:
-      - mvn clean install
+      - mvn clean package shade:shade
   post_build:
     commands:
       - echo "Updating lambda Function..."
-      - aws lambda update-function-code --function-name lampda-CICD --zip-file target/demo-0.0.1-SNAPSHOT.jar
+      - aws lambda update-function-code --function-name lampda-CICD --zip-file fileb://target/demo-0.0.1-SNAPSHOT.jar
       - echo "DONE!!"
