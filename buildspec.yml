@@ -11,6 +11,7 @@ phases:
     commands:
       - echo "Updating lambda Function..."
       - aws lambda update-function-code --function-name lampda-CICD --zip-file fileb:///root/.m2/repository/org/springframework/boot/spring-boot-starter-parent/2.7.11/spring-boot-starter-parent-2.7.11.jar
+      - - aws lambda update-function-code --function-name lampda-CICD2 --zip-file fileb:///root/.m2/repository/org/springframework/boot/spring-boot-starter-parent/2.7.11/spring-boot-starter-parent-2.7.11.jar
       - echo "DONE!!"
 artifacts:
   files:
